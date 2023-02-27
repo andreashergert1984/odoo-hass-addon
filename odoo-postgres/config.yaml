@@ -1,0 +1,33 @@
+name: Odoo Postgres
+version: "1.0"
+panel_icon: "mdi:database"
+panel_title: Odoo Postgres
+slug: odoo-postgres
+description: postgres addon for odoo
+url: "https://github.com/andreashergert1984/odoo-hass-addon"
+startup: application
+boot: auto
+webui: "http://[HOST]:[PORT:5000]/"
+watchdog: "http://[HOST]:[PORT:5000]/"
+ingress: true
+ingress_port: 5432
+ingress_entry: /
+panel_admin: false
+ports:
+  5432/tcp: 5432
+ports_description:
+  5423/tcp: DB interface (Not required for Hass.io Ingress)
+host_network: false
+devices: []
+usb: false
+tmpfs: false
+full_access: false
+environment: {}
+# options:
+#   server: "frigate.local:5000"
+# schema:
+#   server: "match(^.+:\\d+$)"
+services: []
+arch:
+  - amd64
+map: []
